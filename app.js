@@ -62,7 +62,7 @@ function pickFriend(){
         alert("Please, add some friends' names before picking a secret friend.");
     } else {
         // Now that we know the arrayFriends isn't empty, let's pick a random index from the array
-        let randomIndex = parseInt(Math.random() * arrayFriends.length +1);
+        let randomIndex = Math.floor(Math.random() * arrayFriends.length +1);
 
         // Then, locate the name in the generated randomIndex
         let secretFriend = arrayFriends[randomIndex]; 
