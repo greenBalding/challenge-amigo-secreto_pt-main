@@ -46,8 +46,8 @@ function displayArrayFriends() {
         // Then, a <li> element is created
         let li = document.createElement("li");
 
-        // Let´s assign each name to the <li> element using textContent (https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
-        li.textContent = name;
+        // Let´s assign each name to the <li> element using innerHTML
+        li.innerHTML = name;
 
         // Append the <li> element to the <ul> element
         resultList.appendChild(li);
@@ -62,7 +62,7 @@ function pickFriend(){
         alert("Please, add some friends' names before picking a secret friend.");
     } else {
         // Now that we know the arrayFriends isn't empty, let's pick a random index from the array
-        let randomIndex = Math.floor(Math.random() * arrayFriends.length +1);
+        let randomIndex = Math.floor(Math.random() * arrayFriends.length);
 
         // Then, locate the name in the generated randomIndex
         let secretFriend = arrayFriends[randomIndex]; 
@@ -70,7 +70,7 @@ function pickFriend(){
         // Let´s display the secretFriend into the <ul> element
         let resultList = document.getElementById("resultList");
 
-        // Let´s assign each name to the <ul> element using textContent 
-        resultList.textContent = `You picked ${secretFriend} as your Secret Friend`;
+        // Let´s update the result with the secretFriend using innerHTML
+        resultList.innerHTML = `You picked ${secretFriend} as your Secret Friend`;
     }
 }
