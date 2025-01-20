@@ -34,11 +34,19 @@ I am not sure exactly how v2.0 will evolve yet, but I’ll be updating this READ
 
 To try out the project:
 
+(A) Local Setup
+
 1. Clone this repository to your local machine:
 
    git clone https://github.com/greenBalding/challenge-amigo-secreto_pt-main
 
 2. Open the index.html file in your browser to start using the application.
+
+(B) Online Access
+
+1. Access the project directly via the link:
+
+https://greenbalding.github.io/challenge-amigo-secreto_pt-main/
 
 ## 5. Technologies Used
 
