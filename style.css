@@ -160,3 +160,22 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+/* Language-switch buttons*/
+
+.language-button {
+    position: absolute; /* Or adjust placement as needed */
+    top: 10px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f0f0f0; /* Matches your theme */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-button:hover {
+    background-color: #e0e0e0;
+}

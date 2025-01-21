@@ -74,3 +74,56 @@ function pickFriend(){
         resultList.innerHTML = `You picked ${secretFriend} as your Secret Friend`;
     }
 }
+
+/* NEW FEATURES AREA */
+
+// Let's set the default language. In this case, it's English
+let currentLanguage = 'EN';
+
+// Let's set the elements that will be switched
+const translations = {
+    EN: {
+        mainTitle: "Secret Friend",
+        sectionTitle: "Write some friends' names",
+        inputPlaceholder: "Write a name",
+        buttonAdd: "Add",
+        buttonDraw: "Pick a Secret Friend",
+    },
+    PT: {
+        mainTitle: "Amigo Secreto",
+        sectionTitle: "Digite o nome dos seus amigos",
+        inputPlaceholder: "Digite um nome",
+        buttonAdd: "Adicionar",
+        buttonDraw: "Sortear amigo",
+    }
+};
+
+// Let's create a function that will be responsible for changing the tags in the HTML file
+function switchLanguage() {
+    // This is the condition that will switch the current language displayed to the user
+    currentLanguage = currentLanguage === 'EN' ? 'PT' : 'EN';
+
+    // Let´s declare an array of elements to update along with their respective translation keys to reduce redundancy and make the code more maintainable
+    const elementsToUpdate = [
+        { selector: '.main-title', property: 'textContent', translationKey: 'mainTitle' },
+        { selector: '.section-title', property: 'textContent', translationKey: 'sectionTitle' },
+        { selector: '.input-name', property: 'placeholder', translationKey: 'inputPlaceholder' },
+        { selector: '.button-add', property: 'textContent', translationKey: 'buttonAdd' }
+    ];
+
+    // Then, we iterate over each element and update it based on the selected language.
+    elementsToUpdate.forEach(element => {
+        document.querySelector(element.selector)[element.property] = translations[currentLanguage][element.translationKey];
+    });
+
+    /* An error occurred. After switching languages, the image inside the buttonDraw was missing. 
+    Instead of changing the entire button's textContent, we just update the text inside the button while keeping the image intact. */
+    const buttonDraw = document.querySelector('.button-draw');
+    const buttonImage = buttonDraw.querySelector('img');
+    
+    buttonDraw.textContent = translations[currentLanguage].buttonDraw;
+    buttonDraw.prepend(buttonImage);  // Re-attach the image if it gets removed
+
+    // Update the button text to indicate the next language. This switches the language and updates the button dynamically.
+    document.getElementById('language-switch').textContent = currentLanguage === 'EN' ? 'PT' : 'EN';
+}

@@ -53,3 +53,7 @@ https://greenbalding.github.io/challenge-amigo-secreto_pt-main/
 - HTML5 for structure
 - CSS3 for styling
 - JavaScript for interactivity
+
+## 6. New Features
+
+6.1. A language switch button was added, allowing users to easily switch between English and Portuguese. This dynamic feature enhances accessibility and personalizes the user experience. While it currently supports only two languages, the option to add more languages in the future remains open.
