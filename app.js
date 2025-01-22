@@ -127,3 +127,29 @@ function switchLanguage() {
     // Update the button text to indicate the next language. This switches the language and updates the button dynamically.
     document.getElementById('language-switch').textContent = currentLanguage === 'EN' ? 'PT' : 'EN';
 }
+
+/* NEW FEATURES AREA - with GITHUB COPILOT 🔥*/
+
+// Let's set the default theme. In this case, it's "Default"
+let currentTheme = 'Default';
+
+// Let's set the elements that will be switched
+const themeTexts = {
+    Default: "Switch to Nitro 🔥",
+    Nitro: "Switch to Default"
+};
+
+// Function to toggle the theme
+function switchTheme() {
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+    const themeButton = document.getElementById('theme-switch');
+
+    // This is the condition that will switch the current theme displayed to the user
+    currentTheme = currentTheme === 'Default' ? 'Nitro' : 'Default';
+
+    // Update the stylesheet based on the current theme
+    themeStylesheet.setAttribute('href', currentTheme === 'Default' ? 'style.css' : 'style-nitro.css');
+
+    // Update the button text to indicate the next theme
+    themeButton.textContent = themeTexts[currentTheme];
+}

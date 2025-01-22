@@ -57,3 +57,5 @@ https://greenbalding.github.io/challenge-amigo-secreto_pt-main/
 ## 6. New Features
 
 6.1. A language switch button was added, allowing users to easily switch between English and Portuguese. This dynamic feature enhances accessibility and personalizes the user experience. While it currently supports only two languages, the option to add more languages in the future remains open.
+
+6.2. A theme switch button was added, enabling users to toggle between the default theme and a "Nitro" theme. This feature offers a visually distinct experience by providing a different color scheme and layout. The development of this feature was assisted by GitHub Copilot, which provided code suggestions and improvements throughout the process.

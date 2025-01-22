@@ -113,6 +113,9 @@ button {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-add {
@@ -164,12 +167,12 @@ ul {
 /* Language-switch buttons*/
 
 .language-button {
-    position: absolute; /* Or adjust placement as needed */
+    position: absolute;
     top: 10px;
     right: 20px;
     padding: 8px 16px;
     font-size: 14px;
-    background-color: #f0f0f0; /* Matches your theme */
+    background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
@@ -177,5 +180,23 @@ ul {
 }
 
 .language-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Theme-switch button */
+.theme-button {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-button:hover {
     background-color: #e0e0e0;
 }
