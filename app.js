@@ -19,7 +19,7 @@ function addFriend(){
 
     // Let´s implement the alert for empty input or invalid data
     if (nameFriend == ""){
-        alert("Please, enter a valid name.");
+        alert(translations[currentLanguage].alertInvalidName);
     } else {
         // Add the name to the array
         arrayFriends.push(nameFriend);
@@ -59,7 +59,7 @@ function pickFriend(){
 
     // Let´s create an alert if the arrayFriends is empty
     if (arrayFriends.length == 0){
-        alert("Please, add some friends' names before picking a secret friend.");
+        alert(translations[currentLanguage].alertNoNames);
     } else {
         // Now that we know the arrayFriends isn't empty, let's pick a random index from the array
         let randomIndex = Math.floor(Math.random() * arrayFriends.length);
@@ -71,7 +71,7 @@ function pickFriend(){
         let resultList = document.getElementById("resultList");
 
         // Let´s update the result with the secretFriend using innerHTML
-        resultList.innerHTML = `You picked ${secretFriend} as your Secret Friend`;
+        resultList.innerHTML = translations[currentLanguage].resultMessage.replace("{secretFriend}", secretFriend);
     }
 }
 
@@ -88,6 +88,9 @@ const translations = {
         inputPlaceholder: "Write a name",
         buttonAdd: "Add",
         buttonDraw: "Pick a Secret Friend",
+        alertInvalidName: "Please, enter a valid name.",
+        alertNoNames: "Please, add some friends' names before picking a secret friend.",
+        resultMessage: "You picked {secretFriend} as your Secret Friend"
     },
     PT: {
         mainTitle: "Amigo Secreto",
@@ -95,6 +98,9 @@ const translations = {
         inputPlaceholder: "Digite um nome",
         buttonAdd: "Adicionar",
         buttonDraw: "Sortear amigo",
+        alertInvalidName: "Por favor, insira um nome válido.",
+        alertNoNames: "Por favor, adicione alguns nomes de amigos antes de sortear um amigo secreto.",
+        resultMessage: "Você escolheu {secretFriend} como seu Amigo Secreto"
     }
 };
 

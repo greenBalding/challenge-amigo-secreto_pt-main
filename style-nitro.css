@@ -8,6 +8,7 @@
     --color-white: #FFFFFF; 
 }
 
+/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -16,11 +17,11 @@
 }
 
 body {
+    height: 100vh;
     background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .main-content {
@@ -33,6 +34,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Banner */
 .header-banner {
     flex: 50%;
     display: flex;
@@ -49,6 +51,48 @@ body {
     margin-top: 20px;
 }
 
+.main-title {
+    font-size: 36px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.buttons-switch {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    justify-content: space-between;
+}
+
+
+.language-button,
+.theme-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language-button:hover,
+.theme-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.theme-button {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* Seção de entrada */
 .input-section {
     flex: 50%;
     display: flex;
@@ -59,18 +103,9 @@ body {
     border-radius: 0 20px 20px 0;
 }
 
-.main-title {
-    font-size: 36px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-    text-align: center;
-}
-
 .section-title {
     font-family: "Inter", serif;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--color-tertiary);
     margin: 10px 0;
@@ -104,7 +139,6 @@ body {
     background-color: var(--color-button);
     color: var(--color-white);
     border-radius: 0 25px 25px 0;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,6 +149,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
@@ -131,8 +166,9 @@ ul {
     text-align: center;
 }
 
+/* Botão de sortear título */
 .button-container {
-    width: 100%;
+    width: 300px;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -142,12 +178,11 @@ ul {
     display: flex;
     align-items: center;
     width: 80%;
-    padding: 8px 16px; 
+    padding: 8px 16px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 14px;
     border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,30 +194,5 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
-    transform: scale(1.05);
-}
-
-.language-button, .theme-button {
-    position: absolute;
-    top: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.language-button {
-    right: 20px;
-}
-
-.theme-button {
-    right: 150px;
-}
-
-.language-button:hover, .theme-button:hover {
-    background-color: #e0e0e0;
     transform: scale(1.05);
 }
